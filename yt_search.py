@@ -1,4 +1,4 @@
-#! usr/bin/env python3
+#! /usr/bin/env python3
 
 """
 yt_search.py - Searches YouTube with the user's query, and opens up a web browser with the top
