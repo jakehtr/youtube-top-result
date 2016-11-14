@@ -12,7 +12,6 @@ import requests
 
 def get_top_yt_result(url):
     res = requests.get(url)
-    # check to see if the request was successful
     try:
         res.raise_for_status()
     except Exception as e:
@@ -28,5 +27,5 @@ if __name__ == '__main__':
     search_query = input('YT Search Query: ').lower().strip().replace(' ', '+')
     yt_url = 'https://www.youtube.com/results?search_query={}'.format(search_query)
     top_result = get_top_yt_result(yt_url)
-    if top_result is not None:
+    if top_result:
         webbrowser.open(top_result)
